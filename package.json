@@ -1,16 +1,31 @@
 {
-  "name": "parking-lot-superadmin-webapp",
+  "name": "react-antd-redux-boilerplate",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+    "antd": "^3.10.8",
+    "axios": "^0.18.0",
+    "babel-plugin-import": "^1.11.0",
+    "i18n-react": "^0.6.4",
+    "lodash": "^4.17.11",
+    "node-sass": "^4.10.0",
+    "react-app-rewire-less": "^2.1.3",
+    "react-app-rewired": "^1.6.2",
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1",
+    "redux": "^4.0.1",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-app-rewired start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build-js": "react-app-rewired build",
+    "build": "npm-run-all build-css build-js",
+    "test": "react-app-rewired test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -21,5 +36,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "moment": "^2.23.0",
+    "moment-timezone": "^0.5.23",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  }
 }
