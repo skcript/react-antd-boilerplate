@@ -1,4 +1,4 @@
-## Boilerplate for React - antd - Scss - Redux
+## Boilerplate for React - antd - SCSS - Redux
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
