@@ -6,7 +6,7 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <Button type="primary">Login</Button>
+        <Button className="color" type="primary">Login</Button>
       </div>
     );
   }
